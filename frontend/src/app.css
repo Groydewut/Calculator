@@ -1,0 +1,189 @@
+:root {
+    --bg-color: #121214;
+    --panel-bg: rgba(30, 30, 34, 0.75);
+    --btn-num-bg: rgba(255, 255, 255, 0.06);
+    --btn-num-hover: rgba(255, 255, 255, 0.12);
+    --btn-op-bg: rgba(255, 159, 10, 0.15);
+    --btn-op-text: #ff9f0a;
+    --btn-op-hover: rgba(255, 159, 10, 0.25);
+    --btn-action-bg: rgba(255, 69, 58, 0.15);
+    --btn-action-text: #ff453a;
+    --btn-action-hover: rgba(255, 69, 58, 0.25);
+    --text-main: #f5f5f7;
+    --text-muted: #8e8e93;
+}
+
+/* Добавьте этот класс в CSS и повесьте его, например, на тег <h2> или контейнер */
+.history-header, h2 {
+    --wails-drop-target: drag; /* Позволяет тягать окно за эти элементы */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #121214; /* Цвет должен совпадать с фоном калькулятора */
+    overflow: hidden; /* Отключаем случайные скроллы окна */
+    user-select: none; /* Запрещаем выделение текста синим цветом */
+}
+
+.calculator-container {
+    display: flex;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    background: #121214; /* Убираем прозрачность glassmorphism, чтобы фон был слитным */
+    border: none;
+    box-shadow: none;
+}
+
+.calculator {
+    width: 320px;
+}
+
+h2, h3 {
+    margin: 0 0 16px 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: -0.5px;
+}
+
+/* Дисплей */
+.display-container {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    text-align: right;
+}
+
+.calc-display {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    text-align: right;
+    outline: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.result {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Сетка кнопок */
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    height: 54px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-num { background: var(--btn-num-bg); }
+.btn-num:hover { background: var(--btn-num-hover); }
+
+.btn-op { 
+    background: var(--btn-op-bg); 
+    color: var(--btn-op-text);
+}
+.btn-op:hover { background: var(--btn-op-hover); }
+
+.btn-action { 
+    background: var(--btn-action-bg); 
+    color: var(--btn-action-text);
+}
+.btn-action:hover { background: var(--btn-action-hover); }
+
+.btn-zero {
+    grid-column: span 2;
+}
+
+.btn-equals {
+    background: #ff9f0a;
+    color: #ffffff;
+}
+.btn-equals:hover {
+    background: #ffb340;
+    transform: scale(1.02);
+}
+.btn:active { transform: scale(0.96); }
+
+/* Боковая панель истории */
+.history-panel {
+    width: 240px;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.btn-clear-history {
+    background: transparent;
+    border: none;
+    color: var(--btn-action-text);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+.btn-clear-history:hover { background: var(--btn-action-bg); }
+
+.history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 290px;
+    flex-grow: 1;
+}
+
+.history-list li {
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: right;
+    word-break: break-all;
+}
+
+.history-list .empty-state {
+    text-align: center;
+    background: transparent;
+    font-style: italic;
+    padding-top: 40px;
+}
+
+/* Кастомизация скроллбара */
+.history-list::-webkit-scrollbar { width: 4px; }
+.history-list::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 4px; }
