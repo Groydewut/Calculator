@@ -5,16 +5,21 @@
 ---
 
 # Демонстрация
+
  <img width="656" height="573" alt="image" src="https://github.com/user-attachments/assets/890dd8e1-244f-49ea-8c77-920d99706598" />
+ 
 > 📷 **Главное окно программы**
 
 <img width="656" height="573" alt="image" src="https://github.com/user-attachments/assets/063e1291-95bb-4d6f-942c-1f5d685579b9" />
+
 > 📷 **Выполнение вычисления**
 
 <img width="318" height="529" alt="image" src="https://github.com/user-attachments/assets/d849a895-133d-4267-a468-d78c75d66ba2" />
+
 > 📷 **История операций**
 
 <img width="298" height="200" alt="image" src="https://github.com/user-attachments/assets/c7a80266-0ab2-4af8-9c78-48959f7e6efe" />
+
 > 📷 **Очистка истории**
 
 ---
