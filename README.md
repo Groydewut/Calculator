@@ -6,11 +6,11 @@
 
 # Демонстрация
 
- <img width="656" height="573" alt="image" src="https://github.com/user-attachments/assets/890dd8e1-244f-49ea-8c77-920d99706598" />
+ <img width="328" height="286" alt="image" src="https://github.com/user-attachments/assets/890dd8e1-244f-49ea-8c77-920d99706598" />
  
 > 📷 **Главное окно программы**
 
-<img width="656" height="573" alt="image" src="https://github.com/user-attachments/assets/063e1291-95bb-4d6f-942c-1f5d685579b9" />
+<img width="328" height="286" alt="image" src="https://github.com/user-attachments/assets/063e1291-95bb-4d6f-942c-1f5d685579b9" />
 
 > 📷 **Выполнение вычисления**
 
